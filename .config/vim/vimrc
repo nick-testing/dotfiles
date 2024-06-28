@@ -1,0 +1,30 @@
+" Load indentation rules and plugins according ot the detected filetype
+filetype plugin indent on
+
+" Show command in status line.
+set showcmd
+
+" Enable mouse usage (all modes)
+" set mouse=a  
+
+set hlsearch
+" Sets clipboard to the system clipboard
+set clipboard=unnamedplus
+" Sets tab size to 4 spaces
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+" Converts tabs to spaces
+set expandtab
+set autoindent
+set fileformat=unix
+
+" highlight syntax
+syntax on
+set encoding=utf-8
+" add line numbers
+set number relativenumber
+" Enable autocomplete, ctrl+n to activate
+set wildmode=longest,list,full
+" Disables automatic commenting on newline
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
