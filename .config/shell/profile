@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# Profile file, adds environment variables on login
+
+# Add all files in ~/.local/bin/ to PATH
+export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
+
+# # Default programs
+# export EDITOR="vim"
+# export BROWSER="firefox"
+# export TERMINAL="urxvt-unicode"
+
+# Add XDG base directories
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+# Set default vimrc directory
+export VIMINIT="source $XDG_CONFIG_HOME/vim/vimrc"
+
+# Program Specific settings
+export LESSHISTFILE="/dev/null"
+
+# Set .bash_history location
+export HISTFILE="$XDG_CONFIG_HOME/bash/bash_history"

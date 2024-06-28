@@ -1,0 +1,43 @@
+#!/bin/sh
+
+# Verbosity and settings I always want enabled
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	bc="bc -ql" \
+	rsync="rsync -vrPlu" \
+	mkd="mkdir -pv" \
+	yt-dlp="yt-dlp --embed-metadata -i" \
+	yta="yt -x -f bestaudio/best" \
+	ytt="yt --skip-download --write-thumbnail" \
+	ffmpeg="ffmpeg -hide_banner"
+
+# Colorize commands when possible.
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi" \
+	ip="ip -color=auto"
+
+# systemctl aliases
+alias \
+    ctlsp="systemctl stop" \
+    ctlst="systemctl start" \
+    ctlrt="systemctl restart" \
+    ctls="systemctl status"
+
+# ls aliases
+alias \
+    ll='ls -alF' \
+    la='ls -A' \
+    l='ls -CF'
+
+# Turn screen off without suspending
+alias off="sleep 1 && xset dpms force off"
+
+# Save wget hosts file in the .config directory
+alias wget="wget --hsts-file=$XDG_CONFIG_HOME/wget/wget-hsts"
+
+
