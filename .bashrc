@@ -10,7 +10,8 @@ fi
 
 
 # No bullshit prompt
-PS1="\[\033[01;32m\]\w\[\033[00m\] $ "
+#PS1="\[\033[01;32m\]\w\[\033[00m\] $ "
+PS1='\[\e[38;5;45m\]\w\[\e[0m\] $ '
 
 # Set history file size
 HISTSIZE=5000
