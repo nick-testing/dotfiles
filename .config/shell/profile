@@ -20,6 +20,3 @@ export VIMINIT="source $XDG_CONFIG_HOME/vim/vimrc"
 
 # Program Specific settings
 export LESSHISTFILE="/dev/null"
-
-# Set .bash_history location
-export HISTFILE="$XDG_CONFIG_HOME/bash/bash_history"
