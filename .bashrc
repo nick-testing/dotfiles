@@ -1,14 +1,3 @@
-# Alias definitions.
-if [ -f ~/.config/shell/aliasrc ]; then
-    source ~/.config/shell/aliasrc
-fi
-
-# Variable definitions, looks for variables in the provided file
-if [ -f ~/.config/shell/profile ]; then
-    source ~/.config/shell/profile
-fi
-
-
 # No bullshit prompt
 #PS1="\[\033[01;32m\]\w\[\033[00m\] $ "
 PS1='\[\e[38;5;45m\]\w\[\e[0m\] $ '
@@ -29,10 +18,13 @@ shopt -s histappend
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# Alias definitions.
+[ -f ~/.config/shell/aliasrc ] && source ~/.config/shell/aliasrc
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
+# Variable definitions, looks for variables in the provided file
+[ -f ~/.config/shell/profile ] && source ~/.config/shell/profile
+
+# enable programmable completion features 
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
