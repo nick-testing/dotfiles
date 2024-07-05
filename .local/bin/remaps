@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Script is called on startup to remap keys
+# Decrease key repeat delay rate to 50 per second
+xset r rate 300 50
+# Map the caps lock key to escape
+setxkbmap -option caps:escape
+# Turn off capslock since there is no longer a key mapped for it
+xset -q | grep -q "Caps Lock:\s*on" && xdotool key Caps_Lock
