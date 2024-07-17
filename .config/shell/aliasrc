@@ -42,10 +42,8 @@ alias wget="wget --hsts-file=$XDG_CONFIG_HOME/wget/wget-hsts"
 
 # gcc compilation aliases: c89, c99, debug-mode, release-mode
 alias \
-    gd='gcc -ansi -pedantic-errors -Wall -Wextra -g' \
-    gc='gcc -ansi -pedantic-errors -Wall -Wextra -DNDEBUG -O3' \
-    gd9='gcc -std=c99 -pedantic-errors -Wall -Wextra -g' \
-    gc9='gcc -std=c99 -pedantic-errors -Wall -Wextra -g'
+    gd='gcc -pedantic-errors -Wall -Wextra -g' \
+    gc='gcc -pedantic-errors -Wall -Wextra -DNDEBUG -O3' \
 
 # Valgrind alias
 alias vlg='valgrind --leak-check=yes --track-origins=yes'
