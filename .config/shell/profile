@@ -6,7 +6,7 @@
 export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
 
 # # Default programs
-# export EDITOR="vim"
+export EDITOR="nvim"
 # export BROWSER="firefox"
 # export TERMINAL="urxvt-unicode"
 
