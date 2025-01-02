@@ -37,6 +37,9 @@ alias \
 # vim alias
 alias vim='nvim'
 
+# Conty alias, assuming that that conty.sh is in PATH
+alias conty.sh="HOME_DIR=$HOME/contyhome conty.sh"
+
 # Turn screen off without suspending
 alias off="sleep 1 && xset dpms force off"
 
