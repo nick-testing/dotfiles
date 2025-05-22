@@ -15,11 +15,24 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
+
+#################################
+### Program Specific settings ###
+#################################
+
+# Remove less history file
+export LESSHISTFILE="/dev/null"
+
+# Change CUDA's config directory
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+
 # Set default manpages viewer to Neovim
 export MANPAGER="nvim +Man!"
 
 # Set default vimrc directory
 export VIMINIT="source $XDG_CONFIG_HOME/vim/vimrc"
 
-# Program Specific settings
-export LESSHISTFILE="/dev/null"
+# Set default python directories
+export PYTHON_HISTORY="$XDG_CACHE_HOME/python/history"
+#export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
+
