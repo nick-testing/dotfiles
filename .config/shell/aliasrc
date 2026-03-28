@@ -54,3 +54,19 @@ alias \
 # Valgrind alias
 alias vlg='valgrind --leak-check=yes --track-origins=yes'
 
+# Git aliases
+git() {
+    [[ "$1" == "diff" ]] && git difftool ${@:2} || command git $@
+}
+
+alias \
+    a='git add' \
+    gs='git status' \
+    gb='git branch'
+    gpush='gpush' \
+    gpull='git pull' \
+    gco='git checkout' \
+    gfom='git fetch origin master' \
+    gmom='git merge origin master' \
+    gdiff='git difftool' \
+    gcherry='git cherry-pick' \
