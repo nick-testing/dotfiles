@@ -46,14 +46,6 @@ alias off="sleep 1 && xset dpms force off"
 # Save wget hosts file in the .config directory
 alias wget="wget --hsts-file=$XDG_CONFIG_HOME/wget/wget-hsts"
 
-# gcc compilation aliases: c89, c99, debug-mode, release-mode
-alias \
-    gd='gcc -pedantic-errors -Wall -Wextra -g' \
-    gc='gcc -pedantic-errors -Wall -Wextra -DNDEBUG -O3' \
-
-# Valgrind alias
-alias vlg='valgrind --leak-check=yes --track-origins=yes'
-
 # Git aliases
 git() {
     [[ "$1" == "diff" ]] && git difftool ${@:2} || command git $@
@@ -62,11 +54,20 @@ git() {
 alias \
     a='git add' \
     gs='git status' \
-    gb='git branch'
-    gpush='gpush' \
+    gb='git branch' \
+	gc='git commit -m' \
+    gpush='git push' \
     gpull='git pull' \
     gco='git checkout' \
     gfom='git fetch origin master' \
     gmom='git merge origin master' \
     gdiff='git difftool' \
     gcherry='git cherry-pick' \
+
+# gcc compilation aliases: c89, c99, debug-mode, release-mode
+# alias \
+#     gd='gcc -pedantic-errors -Wall -Wextra -g' \
+#     gc='gcc -pedantic-errors -Wall -Wextra -DNDEBUG -O3' \
+
+# Valgrind alias
+# alias vlg='valgrind --leak-check=yes --track-origins=yes'
