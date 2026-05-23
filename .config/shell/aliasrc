@@ -44,7 +44,7 @@ alias conty.sh="HOME_DIR=$HOME/contyhome conty.sh"
 alias off="sleep 1 && xset dpms force off"
 
 # Save wget hosts file in the .config directory
-alias wget="wget --hsts-file=$XDG_CONFIG_HOME/wget/wget-hsts"
+alias wget="wget --hsts-file=$XDG_CACHE_HOME/wget/wget-hsts"
 
 # Git aliases
 git() {
